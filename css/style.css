@@ -1,10 +1,13 @@
 :root{
     /*primery color*/
     --Pink: hsl(322, 100%, 66%);
+    --open-pink: hsl(322, 100%, 77%);
     /*Natral*/
     --Very-Pale-Cyan: hsl(193, 100%, 96%);
     --Very-Dark-Cyan: hsl(192, 100%, 9%);
     --Grayish-Blue: hsl(208, 11%, 55%);
+
+    --blue:hsl(209, 100%, 92%);
     
 }
 body{
@@ -16,13 +19,93 @@ body{
       body Open Sans 400 700
     */
 }
+/* header */
 header{
-    background-size: contain;
+    background-size: cover;
     background-image: url('../images/bg-hero-desktop.svg');
+    margin-bottom: 12rem;
+    background-color:var(--blue);
+    padding: 0 4rem;
 }
-img{
+
+header .section-header-1{
+    margin-bottom: 6rem;
+}
+.log img{
+    width: 100%;
+    height: 100%;
+}
+header div.button button{
+    padding: 1rem 4rem;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 100px;
+}
+header div.button button:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+header .section-header-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+
+}
+header .section-header-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    padding:1rem;
+}
+.section-header-2 .text h1{
+    max-width: 50%;
+    line-height: 1.7;
+}
+.section-header-2 .text p{
+  max-width: 70%;
+  line-height: 1.5;
+}
+.section-header-2 .text button{
+    padding: 1rem 4rem;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--Pink);
+    margin-top: 1rem;
+}
+.section-header-2 .text button:hover{
+    background-color: var(--open-pink);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+header .section-header-2 div img{
+    width: 130%;
+    height: 130%;
+    position: relative;
+    bottom:5rem;
+}
+header .section-header-2 div.img {
+    display: flex;
+    justify-content: flex-end;
+}
+.section-header-2 .text{
+    position: relative;
+    bottom: 4rem;
+}
+/* img{
     width: 30%;
     height: 30%;
+
+} */
+@media (max-width:450px){
+    img{
+        width: 30%;
+        height: 30%;
+     }
+     main{
+        min-width: 100vh;
+     }
 
 }
 
@@ -55,23 +138,13 @@ ul li{
     list-style: none;
     margin-right: 2rem;
 }
-@media (max-width:450px){
-    footer ,.part_1 ,.part_2 ,.part_3{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
+@media (max-width:450px){ 
+
     footer{
+        visibility: hidden;
+        display: block;
         margin-bottom: 10rem;
         padding-bottom: 5rem;
     }
-    footer .logo img {
-        margin-top: 3rem;
-        padding-left: 24%;
-        width: 50%;
-        height: 50%;
-    }    
 
 }
